@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | Ma3Culture</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS + Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .hover-3d {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+    .hover-3d:hover {
+      transform: rotateY(8deg) scale(1.02);
+      transition: transform 0.6s ease;
+    }
+    .overlay-text {
+      background: rgba(0,0,0,0.6);
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-white font-sans leading-relaxed">
+
+  <!-- Navbar -->
+  <nav class="bg-black shadow-md sticky top-0 z-50 py-3">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <div class="flex items-center space-x-3">
+        <img src="logo/logo.png" alt="Ma3Culture Logo" class="w-10 h-10" />
+        <span class="text-xl font-bold uppercase tracking-wide">Ma3Culture</span>
+      </div>
+      <ul class="flex space-x-6 text-sm uppercase">
+        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="nganya.html" class="hover:text-yellow-400">Nganyas</a></li>
+        <li><a href="car.html" class="hover:text-yellow-400">Cars</a></li>
+        <li><a href="about.html" class="text-yellow-400 font-bold">About</a></li>
+        <li><a href="events.html" class="hover:text-yellow-400">Events</a></li>
+        <li><a href="news.html" class="hover:text-yellow-400">News</a></li>
+        <li><a href="contacts.html" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center py-12 bg-gradient-to-br from-yellow-500 via-pink-500 to-purple-600 text-black shadow-lg">
+    <h1 class="text-5xl font-extrabold mb-2 tracking-wide animate__animated animate__fadeInDown">Welcome to Ma3Culture</h1>
+    <p class="text-lg">Where the streets talk in color, chrome, bass and passion.</p>
+  </header>
+
+  <!-- About Section -->
+  <section class="container mx-auto py-16 px-6">
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="hover-3d">
+        <div class="relative">
+          <img src="assets/matatus/nganya 5.png" alt="Nganya" class="rounded-lg shadow-lg w-full h-96 object-cover" />
+          <div class="absolute bottom-4 left-4 overlay-text">
+            <h2 class="text-xl font-bold">Nganyas: Nairobi’s Street Icons</h2>
+            <p class="text-sm">Matatus aren’t just vehicles — they're cultural masterpieces wrapped in music, paint, and power.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <p class="text-gray-300 text-lg leading-loose">
+          <strong>Ma3Culture</strong> is an homage to Kenya's automotive street heritage — from the roaring speakers and brilliant LED of nganyas to finely-tuned street machines and classic models. Every vehicle is a mobile canvas, a story of the streets, and a statement of identity. This space showcases, celebrates, and documents the power of movement as art.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cars Highlight -->
+  <section class="bg-gray-900 py-16 px-6">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="flex items-center">
+          <p class="text-gray-300 text-lg leading-loose">
+            Whether it's <span class="text-yellow-400 font-bold">JDM culture</span>, <span class="text-pink-400 font-bold">vintage classics</span>, or <span class="text-blue-400 font-bold">modern beasts</span> — our car community thrives on precision and polish. Cars are not just for transit; they’re precision, art, and rebellion in motion.
+          </p>
+        </div>
+        <div class="hover-3d">
+          <div class="relative">
+            <img src="assets/cars/car 7.png" alt="Car Culture" class="rounded-lg shadow-xl w-full h-96 object-cover" />
+            <div class="absolute bottom-4 right-4 overlay-text text-right">
+              <h2 class="text-xl font-bold">Street Machines</h2>
+              <p class="text-sm">From drag strips to alleyways, our cars speak style and performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Culture Statement -->
+  <section class="bg-gradient-to-r from-gray-800 to-gray-950 py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6 animate__animated animate__fadeInUp">This is more than transport.</h2>
+      <p class="text-gray-400 text-xl mb-8">It’s a lifestyle, a movement, and a revolution on wheels.</p>
+      <a href="events.html" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 px-6 rounded-full transition-all duration-300">Explore Events</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 text-center py-6 text-sm">
+    &copy; 2025 Ma3Culture. All rights reserved.
+  </footer>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

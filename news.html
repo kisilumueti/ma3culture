@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>News | Ma3Culture</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS + Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .news-hover:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+    }
+    .news-hover {
+      transition: all 0.4s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-white font-sans tracking-wide">
+
+  <!-- Navbar -->
+  <nav class="bg-black shadow-md sticky top-0 z-50 py-3">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <div class="flex items-center space-x-3">
+        <img src="logo/logo.png" alt="Ma3Culture Logo" class="w-10 h-10" />
+        <span class="text-xl font-bold uppercase tracking-wider">Ma3Culture</span>
+      </div>
+      <ul class="flex space-x-6 text-sm uppercase">
+        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="nganya.html" class="hover:text-yellow-400">Nganyas</a></li>
+        <li><a href="car.html" class="hover:text-yellow-400">Cars</a></li>
+        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+        <li><a href="events.html" class="hover:text-yellow-400">Events</a></li>
+        <li><a href="news.html" class="text-yellow-400 font-bold">News</a></li>
+        <li><a href="contacts.html" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-red-700 to-yellow-500 py-16 text-center shadow-xl">
+    <h1 class="text-5xl font-extrabold text-black tracking-wider animate__animated animate__fadeInDown">
+      Culture Headlines
+    </h1>
+    <p class="text-lg text-black mt-3">The latest in the world of matatus, modified rides, and street legends.</p>
+  </header>
+
+  <!-- News Section -->
+  <section class="container mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- News Article -->
+      <div class="bg-gray-900 rounded-xl overflow-hidden shadow-md news-hover">
+        <img src="assets/matatus/nganya 14.png" class="w-full h-48 object-cover" alt="Nganya" />
+        <div class="p-5">
+          <span class="text-yellow-400 text-xs">July 25, 2025 • Nganya Culture</span>
+          <h2 class="text-xl font-semibold mt-2 mb-2">New Nganya Hits Nairobi Streets</h2>
+          <p class="text-gray-400 text-sm">A new entrant dubbed “Shoke Shoke” features laser show lights, customized interiors, and themed gospel tracks.</p>
+        </div>
+      </div>
+
+      <!-- News Article -->
+      <div class="bg-gray-900 rounded-xl overflow-hidden shadow-md news-hover">
+        <img src="assets/cars/car 7.png" class="w-full h-48 object-cover" alt="Custom Car" />
+        <div class="p-5">
+          <span class="text-blue-400 text-xs">July 30, 2025 • Car Mods</span>
+          <h2 class="text-xl font-semibold mt-2 mb-2">Ma3Culture Racer Takes First Place</h2>
+          <p class="text-gray-400 text-sm">A custom-built Subaru STI from the community secured top podium at the Thika Drag Fest. Mods include NOS + carbon kit.</p>
+        </div>
+      </div>
+
+      <!-- News Article -->
+      <div class="bg-gray-900 rounded-xl overflow-hidden shadow-md news-hover">
+        <img src="assets/matatus/nganya 22.png" class="w-full h-48 object-cover" alt="Event" />
+        <div class="p-5">
+          <span class="text-green-400 text-xs">August 2, 2025 • Culture Watch</span>
+          <h2 class="text-xl font-semibold mt-2 mb-2">Kenyan Matatus Featured in German Art Expo</h2>
+          <p class="text-gray-400 text-sm">Matatus from Eastlands were recently displayed at a European street culture museum. Full cultural exchange pending.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="bg-gradient-to-tr from-purple-900 to-gray-800 py-20 text-center">
+    <h2 class="text-4xl font-bold text-white mb-4">Got a Story? Share it.</h2>
+    <p class="text-gray-400 mb-6">Are you part of the street culture, or just snapped a sick ride? Send us your story to be featured.</p>
+    <a href="contacts.html" class="bg-yellow-500 hover:bg-yellow-600 text-black py-3 px-6 rounded-full transition-all">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-500 text-center py-5 text-sm">
+    &copy; 2025 Ma3Culture. All Rights Reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

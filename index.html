@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ma3Culture | Home of Nganyas & Street Cars</title>
+  
+  <!-- Bootstrap + Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- SEO -->
+  <meta name="description" content="Ma3Culture - The ultimate car show gallery celebrating Kenya's vibrant nganya and model car culture.">
+  <meta name="keywords" content="ma3culture, nganya, matatu, kenya cars, matatu culture, model cars, street art, car gallery, car show, drspiceorganics">
+  <meta name="author" content="Ma3Culture Team">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="../ma3culture/logo/logo.png" type="image/png" />
+  
+  <style>
+    body { scroll-behavior: smooth; }
+    .card-hover:hover { transform: scale(1.02); transition: transform 0.3s ease-in-out; }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-black shadow-md sticky top-0 z-50 py-3">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <div class="flex items-center space-x-3">
+        <img src="../ma3culture/logo/logo.png" alt="Ma3Culture Logo" class="w-10 h-10" />
+        <span class="text-xl font-bold uppercase tracking-wide">Ma3Culture</span>
+      </div>
+      <ul class="flex space-x-6 text-sm uppercase">
+        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="nganya.html" class="hover:text-yellow-400">Nganyas</a></li>
+        <li><a href="car.html" class="hover:text-yellow-400">Cars</a></li>
+        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+        <li><a href="events.html" class="hover:text-yellow-400">Events</a></li>
+        <li><a href="news.html" class="hover:text-yellow-400">News</a></li>
+        <li><a href="contacts.html" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Slideshow -->
+  <div id="heroCarousel" class="carousel slide relative" data-bs-ride="carousel">
+    <div class="carousel-inner h-[80vh]">
+      <!-- Auto insert 3 images -->
+      <script>
+        const validExt = ['png','jpg','jpeg','webp','avif'];
+        let nganyaSlides = '';
+        for(let i = 1; i <= 3; i++) {
+          const ext = validExt.find(ext => true); // pseudo fallback
+          nganyaSlides += `
+            <div class="carousel-item ${i === 1 ? 'active' : ''} h-full">
+              <img src="assets/matatus/nganya ${i}.png" class="d-block w-100 object-cover h-full" alt="Nganya ${i}">
+              <div class="carousel-caption d-none d-md-block bg-black bg-opacity-50 p-3 rounded">
+                <h5 class="text-2xl font-bold">Nganya ${i}</h5>
+                <p>The heartbeat of Nairobi roads</p>
+              </div>
+            </div>`;
+        }
+        document.write(`<div class="carousel-inner h-[80vh]">${nganyaSlides}</div>`);
+      </script>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- Introduction -->
+  <section class="py-16 bg-gray-900 text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-extrabold mb-4">Welcome to Ma3Culture</h2>
+      <p class="max-w-3xl mx-auto text-lg text-gray-400">
+        Dive deep into the heartbeat of Kenya’s street culture. From graffiti-painted matatus (nganyas) to high-end custom rides,
+        Ma3Culture is your gateway to East Africa's most vibrant automotive expressions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Nganya Gallery -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-black">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-8 text-yellow-400">Legendary Nganyas</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <script>
+          for (let i = 1; i <= 12; i++) {
+            const img = `assets/matatus/nganya ${i}.png`;
+            document.write(`
+              <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
+                <img src="${img}" alt="Nganya ${i}" class="w-full h-48 object-cover" />
+                <div class="p-4">
+                  <h4 class="text-lg font-bold">Nganya ${i}</h4>
+                  <p class="text-sm text-gray-400">Built for the streets, made for the culture.</p>
+                </div>
+              </div>
+            `);
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Model Car Showcase -->
+  <section class="py-16 bg-gray-950">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-8 text-blue-400">Street Model Cars</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <script>
+          for (let i = 1; i <= 12; i++) {
+            const img = `assets/cars/car ${i}.png`;
+            document.write(`
+              <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
+                <img src="${img}" alt="Car ${i}" class="w-full h-48 object-cover" />
+                <div class="p-4">
+                  <h4 class="text-lg font-bold">Model Car ${i}</h4>
+                  <p class="text-sm text-gray-400">Precision meets passion.</p>
+                </div>
+              </div>
+            `);
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing Call to Action -->
+  <section class="py-24 bg-gradient-to-br from-yellow-500 to-red-600 text-black text-center">
+    <h2 class="text-4xl font-extrabold mb-4">Feel the Vibe. Live the Culture.</h2>
+    <p class="max-w-2xl mx-auto text-lg">Join us in preserving, promoting, and evolving Nairobi's unique motoring culture — from rubber to road, paint to pride.</p>
+    <a href="events.html" class="mt-6 inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800">Explore Events</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center py-6">
+    <p class="text-gray-400 text-sm">&copy; 2025 Ma3Culture. All rights reserved.</p>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
